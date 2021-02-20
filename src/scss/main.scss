@@ -52,6 +52,10 @@ h2 {
 		font-size: 34px;
 	}
 
+	@include r(1023) {
+		font-size: 28px;
+	}
+
 	font-size: 41px;
 	line-height: 1.27;
 	font-weight: normal;
@@ -130,7 +134,7 @@ h2 {
 		display: block;
 		height: auto;
 		text-align: center;
-		padding: 37px 0 130px;
+		padding: 37px 20px 130px;
 	}
 
 	height: 100vh;
@@ -180,6 +184,14 @@ h2 {
 			width: 100%;
 		}
 
+		@include r(767) {
+			margin-bottom: -10px;
+			width: 150%;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
 		margin-right: -32px;
 		margin-top: -57px;
 	}
@@ -221,6 +233,14 @@ h2 {
 			margin-bottom: 15px;
 		}
 
+		@include r(767) {
+			margin-bottom: 40px;
+
+			br {
+				display: none;
+			}
+		}
+
 		font-size: 25px;
 		line-height: 1.24;
 		margin-bottom: 33px;
@@ -241,9 +261,21 @@ h2 {
 			background-size: contain;
 			transform: translateY(100%);
 		}
+
+		span {
+			font-weight: bold;
+		}
 	}
 
 	.btn {
+		@include r(767) {
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+			justify-content: center;
+			width: 100%;
+		}
+
 		margin-bottom: 15px;
 	}
 
@@ -323,12 +355,14 @@ h2 {
 
 	&__item {
 		@include r(1023) {
-			margin-bottom: 40px;
+			margin-bottom: 60px;
 
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
+
+		
 	}
 
 	&__top {
@@ -398,6 +432,10 @@ h2 {
 }
 
 .docs {
+	@include r(767) {
+		padding: 50px 0;
+	}
+
 	text-align: center;
 	background: #F3F5FB;
 	padding: 84px 0;
@@ -413,6 +451,15 @@ h2 {
 	img {
 		pointer-events: none;
 		user-select: none;
+
+		&.book {
+			@include r(767) {
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 145%;
+			}
+		}
 	}
 
 	p {
@@ -422,13 +469,23 @@ h2 {
 			}
 		}
 
+		@include r(767) {
+			margin-bottom: 35px;
+		}
+
 		font-size: 18px;
 		line-height: 1.58;
 		margin-bottom: 62px;
 	}
 
 	.green {
+		@include r(767) {
+			font-size: 19px;
+			line-height: 1.32;
+		}
+
 		position: relative;
+		font-weight: bold;
 
 		&::before {
 			@include r(1023) {
@@ -448,6 +505,19 @@ h2 {
 	}
 
 	.btn {
+		@include r(767) {
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+			font-size: 16px;
+			width: 100%;
+			justify-content: center;
+		}
+
+		@include r(374) {
+			font-size: 14px;
+		}
+
 		position: relative;
 
 		&::before {
@@ -469,8 +539,20 @@ h2 {
 }
 
 .steps {
+	@include r(767) {
+		padding: 50px 0;
+	}
+
 	text-align: center;
 	padding: 68px 0;
+
+	h2 {
+		@include r(767) {
+			br {
+				display: none;
+			}
+		}
+	}
 
 	&__list {
 		@include r(1023) {
@@ -485,6 +567,11 @@ h2 {
 	}
 
 	p {
+		@include r(767) {
+			font-size: 17px;
+			line-height: 1.47;
+		}
+
 		margin-bottom: 74px;
 		font-size: 18px;
 	}
@@ -542,6 +629,12 @@ h2 {
 		}
 
 		div {
+			@include r(767) {
+				br {
+					display: none;
+				}
+			}
+
 			line-height: 1.47;
 		}
 	}
