@@ -131,9 +131,7 @@ h2 {
 
 .main {
 	@include r(1023) {
-		display: block;
 		height: auto;
-		text-align: center;
 		padding: 37px 20px 130px;
 	}
 
@@ -141,33 +139,43 @@ h2 {
 	background: linear-gradient(180deg, #2760F2 0%, #103EB4 100%);
 	color: #fff;
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 
+	.container {
+		@include r(1023) {
+			display: block;
+			text-align: center;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+
+		& > div {
+			@include r(1279) {
+				width: 50%;
+			}
+	
+			@include r(1023) {
+				width: 100%;
+			}
+	
+			position: relative;
+	
+			&:first-child {
+				@include r(1279) {
+					margin-right: 0;
+				}
+	
+				margin-right: -54px;
+				margin-left: -54px;
+			}
+		}
+	}
+	
 	img {
 		pointer-events: none;
 		user-select: none;
-	}
-
-	& > div {
-		@include r(1279) {
-			width: 50%;
-		}
-
-		@include r(1023) {
-			width: 100%;
-		}
-
-		position: relative;
-
-		&:first-child {
-			@include r(1279) {
-				margin-right: 0;
-			}
-
-			margin-right: -54px;
-		}
 	}
 
 	.book {

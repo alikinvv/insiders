@@ -13,3 +13,9 @@ let init = () => {
 
 init();
 $(window).resize(init);
+
+$('body').on('click', '.features a', () => {
+    $("html, body").stop().animate({scrollTop: $(document).height()}, 500, 'swing', function() { 
+        // alert("Finished animating");
+     });
+})
