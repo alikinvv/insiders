@@ -165,6 +165,7 @@ h2 {
 			&:first-child {
 				@include r(1279) {
 					margin-right: 0;
+					margin-left: 0;
 				}
 	
 				margin-right: -54px;
@@ -647,5 +648,11 @@ h2 {
 
 			line-height: 1.47;
 		}
+	}
+}
+
+@media screen and (max-height: 650px) {
+	.main {
+		height: 100vh;
 	}
 }
