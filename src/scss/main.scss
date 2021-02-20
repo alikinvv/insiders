@@ -135,7 +135,7 @@ h2 {
 		padding: 37px 20px 130px;
 	}
 
-	height: 100vh;
+	height: calc(100vh - 62px);
 	background: linear-gradient(180deg, #2760F2 0%, #103EB4 100%);
 	color: #fff;
 	position: relative;
@@ -168,7 +168,7 @@ h2 {
 				}
 	
 				margin-right: -54px;
-				margin-left: -54px;
+				margin-left: -108px;
 			}
 		}
 	}
@@ -234,6 +234,7 @@ h2 {
 		font-size: 37px;
 		line-height: 1.27;
 		margin-top: 25px;
+		font-weight: bold;
 	}
 
 	p {
@@ -418,6 +419,7 @@ h2 {
 
 			line-height: 1.47;
 			margin-bottom: 15px;
+			margin-top: 10px;
 		}
 
 		a {
